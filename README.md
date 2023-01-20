@@ -1,6 +1,9 @@
 # PHP_OOP
 This repository is only for a school exercise.
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/23819145-28fcba2a-a5b1-4e52-9297-1c2b20485d4c?action=collection%2Ffork&collection-url=entityId%3D23819145-28fcba2a-a5b1-4e52-9297-1c2b20485d4c%26entityType%3Dcollection%26workspaceId%3Dac654533-5031-4216-be87-809737d1b1e2)
+__Met deze knop kunt u een kopie maken van mijn Postman collectie.__
+
 Bij deze opdracht ga ik voor het grootste gedeelte gebruik maken van een eigen geschreven library. 
 Dit is een php library om de input van $_GET en $_POST te valideren. 
 Dit zodat ik niet zelf hoeft te valideren of de input wel klopt, maar ook zodat ik deze code niet steeds hoef te schrijven. 
@@ -25,7 +28,11 @@ Hieronder staan de leerdoelen die ik moet behalen voor deze opdracht:
 
 
 ## Ik maak op de juiste manier functies in PHP
-_**[Deze link](https://87275.stu.sd-lab.nl/verprog/oop) gaar naar mijn website voor het eerste leerdoel.**_
+_**U vertelde mij dat een method niet voldoet aan de definitie van een functie.**_
+Daarom heb ik hieronder een aantal links naar de eerste drie opdrachten van de reader.
+[Functie_1](https://87275.stu.sd-lab.nl/verprog/oop/functie1.php)
+[Functie_2](https://87275.stu.sd-lab.nl/verprog/oop/functie2.php)
+[Functie_3](https://87275.stu.sd-lab.nl/verprog/oop/functie3.php)
 
 _De method die ik hieronder laat zien is onderdeel van één van de classes van de library._
 
@@ -407,11 +414,21 @@ class ValidateID extends ValidateNumber
 ```
 
 ## Ik voeg meerdere objecten toe aan een sessie en lees deze daarna weer op de juiste manier uit.
+
+Hieronder staan de links naar de scripts die verderop in dit document staan.
+* [Script_1](https://87275.stu.sd-lab.nl/verprog/oop/1.session.php) Aanmaken van een objecten en opslaan in de sessie.
+* [Script_2](https://87275.stu.sd-lab.nl/verprog/oop/2.session.php) Ophalen van de objecten uit de sessie.
+* [Script_3](https://87275.stu.sd-lab.nl/verprog/oop/3.session.php) Vernietigen van de sessie.
+
+_Deze scripts staan ook in postman, het is makkelijker om ze daar te testen._
+
 _In dit voorbeeld maak ik geen gebruik van de library._
-Ik maak gebruik van de $_SESSION array om data op te slaan. Deze data kan ik dan weer ophalen.
+Ik maak gebruik van de $_SESSION array om data op te slaan. Deze data kan ik dan weer ophalen. Het is belangrijk om te weten dat private en protected properties niet worden opgeslagen in de sessie.
 
 ### Script 1:
 ```php
+header("Content-Type: application/json");
+
 session_start();
 
 class User {
@@ -430,16 +447,26 @@ class User {
 
 // Create a new user
 $user = new User("username", "name", "email", 1);
+$user2 = new User("username2", "name2", "email2", 2);
+$user3 = new User("username3", "name3", "email3", 3);
 
 // Get the username
-echo json_encode($user);
+echo json_encode([
+    $user,
+    $user2,
+    $user3
+]);
 
-// Save the user to the session
+// save the user to the session
 $_SESSION["user"] = serialize($user);
+$_SESSION["user2"] = serialize($user2);
+$_SESSION["user3"] = serialize($user3);
 ```
 
 ### Script 2:
 ```php
+header("Content-Type: application/json");
+
 session_start();
 
 class User {
@@ -457,12 +484,30 @@ class User {
 }
 
 // check if the user is logged in
-if (isset($_SESSION["user"])) {
+if (isset($_SESSION["user"]) && isset($_SESSION["user2"]) && isset($_SESSION["user3"])) {
     // Get the user from the session
     $user = unserialize($_SESSION["user"]);
+    $user2 = unserialize($_SESSION["user2"]);
+    $user3 = unserialize($_SESSION["user3"]);
     // Get the username
-    echo json_encode($user);
+    echo json_encode([
+            $user,
+            $user2,
+            $user3
+        ]);
 } else {
     echo json_encode("Not logged in");
 }
+```
+
+### Script 3:
+```php
+
+header("Content-Type: application/json");
+
+session_start();
+
+session_destroy();
+
+echo json_encode("Logged out");
 ```
