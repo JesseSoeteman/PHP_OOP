@@ -413,6 +413,7 @@ Ik maak gebruik van de $_SESSION array om data op te slaan. Deze data kan ik dan
 ### Script 1:
 ```php
 session_start();
+
 class User {
     public $username;
     public $name;
