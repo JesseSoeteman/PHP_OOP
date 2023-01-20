@@ -1,6 +1,5 @@
 # PHP_OOP
 This repository is only for a school exercise.
-<br>
 
 Bij deze opdracht ga ik voor het grootste gedeelte gebruik maken van een eigen geschreven library. 
 Dit is een php library om de input van $_GET en $_POST te valideren. 
@@ -9,7 +8,7 @@ Daarboven op komt dat ik dan niet kleine dingen vergeet te valideren, maar door 
 
 De library heet 'ValidateGetPostInput' is te vinden op [GitHub](https://github.com/JesseSoeteman/ValidateGetPostInput) en [Packagist](https://packagist.org/packages/jessesoeteman/validate-get-post-input). 
 
-Hierdoor kan ik de library makkelijk hergebruiken in mijn projecten doormiddel van composer.
+Hierdoor kan ik de library makkelijk hergebruiken in mijn projecten doormiddel van [composer](https://getcomposer.org).
 
 _**Deze library is nog niet af, maar voor het grootste gedeelte wel.**_
 
@@ -26,13 +25,15 @@ Hieronder staan de leerdoelen die ik moet behalen voor deze opdracht:
 
 
 ## Ik maak op de juiste manier functies in PHP
-_De method/functie die ik hieronder laat zien is onderdeel van één van de classes van de library._
+_**[Deze link](https://87275.stu.sd-lab.nl/verprog/oop) gaar naar mijn website voor het eerste leerdoel.**_
 
-Deze functie is een private functie die wordt aangeroepen in de public functie `validate()` als het datatype is ingesteld als DataType::STRING (Dit is een constant waarde om de code leerbaarder te maken).
+_De method die ik hieronder laat zien is onderdeel van één van de classes van de library._
+
+Deze method is een private functie die wordt aangeroepen in de public method `validate()` als het datatype is ingesteld als DataType::STRING (Dit is een constant waarde om de code leerbaarder te maken).
 Deze functie valideert of de input een string is en of deze voldoet aan de min en max lengte. (als hierop gecontroleerd moet worden)
 
 ### Class properties
-`$this->key`_, is de naam van de input._ $_GET['key'] of $_POST['key']_
+`$this->key`_, is de naam van de input._ `$_GET["key]` of `$_POST["key"]`
 
 `$this->value`_, is de input die gevalideerd moet worden._
 
@@ -190,7 +191,7 @@ class ValidateGetPostInput
 
 ## Ik voeg een constructor toe aan een class, zodat bij het maken van een object diverse eigenschappen direct een waarde krijgen
 _Hieronder is de settings class te zien, deze class wordt gebruikt om de settings van de ValidateGetPostInput class te bepalen. (de class hierboven)_
-De library bestaat uit meerdere classes, maar deze class is een van de belangrijkste classes, omdat deze de settings bepaald voor de validatie van de input.
+De library bestaat uit meerdere classes, maar deze class is één van de belangrijkste classes, omdat deze de settings bepaalt voor de validatie van de input.
 
 Hier is te zien dat ik een constructor gebruik met parameters, zodat ik de properties van de class direct een waarde kan geven. Als er geen waarde wordt meegegeven, dan krijgt de property de default waarde.
 ```php
