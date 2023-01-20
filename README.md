@@ -464,9 +464,3 @@ if (isset($_SESSION["user"])) {
     echo json_encode("Not logged in");
 }
 ```
-
-### Schrijven naar de sessie
-Stel `$user` is een class met daarin gebruikers gegevens. Deze class kan ik dan in de sessie zetten.
-```php
-$_SESSION["user"] = $user;
-```
