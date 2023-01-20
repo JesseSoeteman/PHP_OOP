@@ -1,0 +1,101 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5146f5919413c61edea2e0617b4408cd",
+    "packages": [
+        {
+            "name": "jessesoeteman/api-return",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JesseSoeteman/APIReturn.git",
+                "reference": "fb64b09be0c253ab613d9cce1b3d6f2f33058b15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JesseSoeteman/APIReturn/zipball/fb64b09be0c253ab613d9cce1b3d6f2f33058b15",
+                "reference": "fb64b09be0c253ab613d9cce1b3d6f2f33058b15",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "APIReturn\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jesse Soeteman",
+                    "email": "jessesoeteman@gmail.com"
+                }
+            ],
+            "description": "This class can be used to manage the status of an api request.",
+            "support": {
+                "issues": "https://github.com/JesseSoeteman/APIReturn/issues",
+                "source": "https://github.com/JesseSoeteman/APIReturn/tree/v1.2.2"
+            },
+            "time": "2023-01-12T23:19:20+00:00"
+        },
+        {
+            "name": "jessesoeteman/validate-get-post-input",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JesseSoeteman/ValidateGetPostInput.git",
+                "reference": "63e7893f69e9a62be39bc02a731f0ab4552e24f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JesseSoeteman/ValidateGetPostInput/zipball/63e7893f69e9a62be39bc02a731f0ab4552e24f2",
+                "reference": "63e7893f69e9a62be39bc02a731f0ab4552e24f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ValidateGetPostInput\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jesse Soeteman",
+                    "email": "jessesoeteman@gmail.com"
+                }
+            ],
+            "description": "This php class lets you validate a POST or GET input.",
+            "support": {
+                "issues": "https://github.com/JesseSoeteman/ValidateGetPostInput/issues",
+                "source": "https://github.com/JesseSoeteman/ValidateGetPostInput/tree/v1.3"
+            },
+            "time": "2023-01-19T22:54:41+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.4"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

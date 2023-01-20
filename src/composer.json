@@ -1,0 +1,14 @@
+{
+    "name": "jesse/php_oop",
+    "authors": [
+        {
+            "name": "Jesse87275",
+            "email": "67485119+JesseSoeteman@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "jessesoeteman/api-return": "^1.2",
+        "jessesoeteman/validate-get-post-input": "^1.3"
+    }
+}
